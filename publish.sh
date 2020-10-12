@@ -3,6 +3,7 @@
 CURR_DIR=$(dirname $(realpath $0))
 PUBLISH_DIR="${CURR_DIR}/publish"
 PUBLISHED_SOURCE=published_source.zip
+NAME=rendername
 
 rm -rf "${PUBLISH_DIR}"
 mkdir "${PUBLISH_DIR}"
@@ -10,7 +11,7 @@ mkdir "${PUBLISH_DIR}"
 echo "publishing hello function..."
 
 pushd "${CURR_DIR}/src" > /dev/null
-    zip -r "${PUBLISH_DIR}/${PUBLISHED_SOURCE}" *;
+    zip -r "${PUBLISH_DIR}/${PUBLISHED_SOURCE}" *
 popd > /dev/null
 
 pushd ./terraform > /dev/null

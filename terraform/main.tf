@@ -1,7 +1,7 @@
 provider "aws" {
   version = "~> 3.0"
   region  = "us-east-1"
-  profile = "ingenuitous"
+  profile = "your-local-aws-profile"
 }
 
 resource "aws_iam_role" "hello_function_role" {
